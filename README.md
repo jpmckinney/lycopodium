@@ -100,4 +100,4 @@ meth = Object.method(:func)
 
 This project's main repository is on GitHub: [http://github.com/opennorth/lycopodium](http://github.com/opennorth/lycopodium), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
 
-Copyright (c) 2012 Open North Inc., released under the MIT license
+Copyright (c) 2013 Open North Inc., released under the MIT license

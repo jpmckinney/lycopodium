@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["info@opennorth.ca"]
   s.homepage    = "http://github.com/opennorth/lycopodium"
   s.summary     = %q{Test what transformations you can make to a set of unique strings without creating collisions}
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

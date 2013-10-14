@@ -14,7 +14,7 @@ describe Lycopodium do
   end
 
   let :collisions do
-    Lycopodium.new(['foo', 'f o o', 'bar'], lambda{|string| string.gsub(/\p{Space}/, '')})
+    Lycopodium.new(['foo', 'f o o', 'bar'], lambda{|string| string.gsub(' ', '')})
   end
 
   let :no_collisions do

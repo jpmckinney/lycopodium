@@ -9,6 +9,20 @@ Test what transformations you can make to a set of values without creating colli
 
 > Historically, Lycopodium powder, the spores of Lycopodium and related plants, was used as a fingerprint powder. – [Wikipedia](http://en.wikipedia.org/wiki/Fingerprint_powder#Composition)
 
+## What it tries to solve
+
+Let's say you have an authoritative list of names: for example, a list of organization names from a [company register](https://www.ic.gc.ca/app/scr/cc/CorporationsCanada/fdrlCrpSrch.html?locale=en_CA). You want to match a messy list of names – for example, a list of government contractors published by a city – against this authoritative list.
+
+For context, [Open Refine](http://openrefine.org/) offers [two methods to solve this problem](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth):
+
+* Key collision methods group together names that transform into the same fingerprint; transformations include lowercasing letters, removing whitespace and punctuation, sorting words, etc.
+
+* Nearest neighbor methods group together names that are close to each other, using distance functions like [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) and [Prediction by Partial Matching](http://en.wikipedia.org/wiki/Prediction_by_Partial_Matching).
+
+Key collision methods tend to be fast and strict.
+
+If your use case requires fast and strict reconciliation, Lycopodium lets you figure out what transformations can be applied to a list of names without creating collisions between names. Those transformations can then be safely applied to the names on the messy list to match against the authoritative list.
+
 ## Usage
 
 ```ruby
@@ -61,7 +75,7 @@ set_without_collisions = set.reject_collisions
 
 A `Lycopodium` instance otherwise behaves as an array.
 
-## Method definition
+### Method definition
 
 Besides the `->` syntax above, you can define the same method as:
 
@@ -95,6 +109,12 @@ def func(string)
 end
 meth = Object.method(:func)
 ```
+
+## Related projects
+
+* [Nomenklatura](http://nomenklatura.okfnlabs.org/) is a web service to maintain a canonical list of entities and to match messy input against it, either via the user interface or via Open Refine reconciliation.
+* [dedupe](https://github.com/open-city/dedupe) is a Python library to determine when two records are about the same thing.
+* [name-cleaver](https://github.com/sunlightlabs/name-cleaver) is a Python library to parse and standardize the names of people and organizations.
 
 ## Bugs? Questions?
 

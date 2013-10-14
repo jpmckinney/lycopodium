@@ -13,6 +13,8 @@ class Lycopodium < Array
     self.function = function
   end
 
+  # Removes all members of the set that collide after transformation.
+  #
   # @return [Array] the members of the set without collisions
   def reject_collisions
     hashes, collisions = hashes_and_collisions
@@ -26,6 +28,8 @@ class Lycopodium < Array
     self.class.new(items, function)
   end
 
+  # Returns a mapping from the original to the transformed value.
+  #
   # @return [Hash] a mapping from the original to the transformed value
   # @raise [Collision] if the method creates collisions between members of the set
   def value_to_fingerprint

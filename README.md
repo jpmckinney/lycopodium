@@ -1,5 +1,6 @@
 # Lycopodium Finds Fingerprints
 
+[![Gem Version](https://badge.fury.io/rb/lycopodium.svg)](http://badge.fury.io/rb/lycopodium)
 [![Build Status](https://secure.travis-ci.org/opennorth/lycopodium.png)](http://travis-ci.org/opennorth/lycopodium)
 [![Dependency Status](https://gemnasium.com/opennorth/lycopodium.png)](https://gemnasium.com/opennorth/lycopodium)
 [![Coverage Status](https://coveralls.io/repos/opennorth/lycopodium/badge.png?branch=master)](https://coveralls.io/r/opennorth/lycopodium)

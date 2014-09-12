@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency('rspec', '~> 2.10')
   s.add_development_dependency('rake')
+  s.add_development_dependency('coveralls')
 end

@@ -1,10 +1,10 @@
 # Lycopodium Finds Fingerprints
 
 [![Gem Version](https://badge.fury.io/rb/lycopodium.svg)](http://badge.fury.io/rb/lycopodium)
-[![Build Status](https://secure.travis-ci.org/opennorth/lycopodium.png)](http://travis-ci.org/opennorth/lycopodium)
-[![Dependency Status](https://gemnasium.com/opennorth/lycopodium.png)](https://gemnasium.com/opennorth/lycopodium)
-[![Coverage Status](https://coveralls.io/repos/opennorth/lycopodium/badge.png?branch=master)](https://coveralls.io/r/opennorth/lycopodium)
-[![Code Climate](https://codeclimate.com/github/opennorth/lycopodium.png)](https://codeclimate.com/github/opennorth/lycopodium)
+[![Build Status](https://secure.travis-ci.org/jpmckinney/lycopodium.png)](http://travis-ci.org/jpmckinney/lycopodium)
+[![Dependency Status](https://gemnasium.com/jpmckinney/lycopodium.png)](https://gemnasium.com/jpmckinney/lycopodium)
+[![Coverage Status](https://coveralls.io/repos/jpmckinney/lycopodium/badge.png?branch=master)](https://coveralls.io/r/jpmckinney/lycopodium)
+[![Code Climate](https://codeclimate.com/github/jpmckinney/lycopodium.png)](https://codeclimate.com/github/jpmckinney/lycopodium)
 
 Test what transformations you can make to a set of values without creating collisions.
 
@@ -117,8 +117,4 @@ meth = Object.method(:func)
 * [dedupe](https://github.com/open-city/dedupe) is a Python library to determine when two records are about the same thing.
 * [name-cleaver](https://github.com/sunlightlabs/name-cleaver) is a Python library to parse and standardize the names of people and organizations.
 
-## Bugs? Questions?
-
-This project's main repository is on GitHub: [http://github.com/opennorth/lycopodium](http://github.com/opennorth/lycopodium), where your contributions, forks, bug reports, feature requests, and feedback are greatly welcomed.
-
-Copyright (c) 2013 Open North Inc., released under the MIT license
+Copyright (c) 2013 James McKinney, released under the MIT license

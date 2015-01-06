@@ -5,9 +5,8 @@ Gem::Specification.new do |s|
   s.name        = "lycopodium"
   s.version     = Lycopodium::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Open North"]
-  s.email       = ["info@opennorth.ca"]
-  s.homepage    = "http://github.com/opennorth/lycopodium"
+  s.authors     = ["James McKinney"]
+  s.homepage    = "http://github.com/jpmckinney/lycopodium"
   s.summary     = %q{Test what transformations you can make to a set of unique strings without creating collisions}
   s.license     = 'MIT'
 

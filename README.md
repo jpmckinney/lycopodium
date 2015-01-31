@@ -1,14 +1,14 @@
 # Lycopodium Finds Fingerprints
 
-[![Gem Version](https://badge.fury.io/rb/lycopodium.svg)](http://badge.fury.io/rb/lycopodium)
-[![Build Status](https://secure.travis-ci.org/jpmckinney/lycopodium.png)](http://travis-ci.org/jpmckinney/lycopodium)
+[![Gem Version](https://badge.fury.io/rb/lycopodium.svg)](https://badge.fury.io/rb/lycopodium)
+[![Build Status](https://secure.travis-ci.org/jpmckinney/lycopodium.png)](https://travis-ci.org/jpmckinney/lycopodium)
 [![Dependency Status](https://gemnasium.com/jpmckinney/lycopodium.png)](https://gemnasium.com/jpmckinney/lycopodium)
 [![Coverage Status](https://coveralls.io/repos/jpmckinney/lycopodium/badge.png)](https://coveralls.io/r/jpmckinney/lycopodium)
 [![Code Climate](https://codeclimate.com/github/jpmckinney/lycopodium.png)](https://codeclimate.com/github/jpmckinney/lycopodium)
 
 Test what transformations you can make to a set of values without creating collisions.
 
-> Historically, Lycopodium powder, the spores of Lycopodium and related plants, was used as a fingerprint powder. – [Wikipedia](http://en.wikipedia.org/wiki/Fingerprint_powder#Composition)
+> Historically, Lycopodium powder, the spores of Lycopodium and related plants, was used as a fingerprint powder. – [Wikipedia](https://en.wikipedia.org/wiki/Fingerprint_powder#Composition)
 
 ## What it tries to solve
 
@@ -18,7 +18,7 @@ For context, [Open Refine](http://openrefine.org/) offers [two methods to solve 
 
 * Key collision methods group together names that transform into the same fingerprint; transformations include lowercasing letters, removing whitespace and punctuation, sorting words, etc.
 
-* Nearest neighbor methods group together names that are close to each other, using distance functions like [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) and [Prediction by Partial Matching](http://en.wikipedia.org/wiki/Prediction_by_Partial_Matching).
+* Nearest neighbor methods group together names that are close to each other, using distance functions like [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) and [Prediction by Partial Matching](https://en.wikipedia.org/wiki/Prediction_by_Partial_Matching).
 
 Key collision methods tend to be fast and strict.
 

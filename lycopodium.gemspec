@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = Lycopodium::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["James McKinney"]
-  s.homepage    = "http://github.com/jpmckinney/lycopodium"
+  s.homepage    = "https://github.com/jpmckinney/lycopodium"
   s.summary     = %q{Test what transformations you can make to a set of unique strings without creating collisions}
   s.license     = 'MIT'
 

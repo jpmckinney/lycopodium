@@ -3,14 +3,34 @@ require "set"
 class Lycopodium < Array
   class Error < StandardError; end
   class Collision < Error; end
+  class RaggedRow < Error; end
 
   attr_accessor :function
+
+  def self.unique_key(data)
+    columns_size = data.first.size
+    data.each do |row|
+      unless row.size == columns_size
+        raise RaggedRow, row.inspect
+      end
+    end
+
+    columns = (0...columns_size).to_a
+    1.upto(columns_size) do |k|
+      columns.combination(k) do |combination|
+        if unique_key?(data, combination)
+          return combination
+        end
+      end
+    end
+    nil
+  end
 
   # @param [Array] set a set of values
   # @param [Proc] function a method that transforms a value
   def initialize(set, function = lambda{|value| value})
     replace(set)
-    self.function = function
+    @function = function
   end
 
   # Removes all members of the set that collide after transformation.
@@ -19,12 +39,12 @@ class Lycopodium < Array
   def reject_collisions
     hashes, collisions = hashes_and_collisions
 
-    items = hashes.reject do |_,hash|
-      collisions.include?(hash)
-    end.map do |item,_|
-      item
+    items = []
+    hashes.each do |item,hash|
+      unless collisions.include?(hash)
+        items << item
+      end
     end
-
     self.class.new(items, function)
   end
 
@@ -52,6 +72,17 @@ class Lycopodium < Array
   end
 
 private
+
+  def self.unique_key?(data, combination)
+    set = Set.new
+    data.each_with_index do |row,index|
+      set.add(row.values_at(*combination))
+      if set.size <= index
+        return false
+      end
+    end
+    true
+  end
 
   def hashes_and_collisions
     collisions = Set.new

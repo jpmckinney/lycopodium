@@ -21,6 +21,31 @@ describe Lycopodium do
     Lycopodium.new(['foo', 'f o o', 'bar'], lambda{|string| string.upcase})
   end
 
+  describe '#unique_key' do
+    it 'should return a unique key if a unique key is found' do
+      Lycopodium.unique_key([
+        ['foo', 'bar', 'baz'],
+        ['foo', 'bar', 'bzz'],
+        ['foo', 'zzz', 'bzz'],
+      ]).should == [1, 2]
+    end
+
+    it 'should return nil if no unique key is found' do
+      Lycopodium.unique_key([
+        ['foo', 'bar'],
+        ['foo', 'bar'],
+        ['foo', 'bar'],
+      ]).should == nil
+    end
+
+    it 'should raise an error if ragged rows' do
+      expect{Lycopodium.unique_key([
+        ['foo'],
+        ['foo', 'bar'],
+      ])}.to raise_error(Lycopodium::RaggedRow, %(["foo", "bar"]))
+    end
+  end
+
   describe '#reject_collisions' do
     it 'should remove all members of the set that collide after transformation' do
       collisions.reject_collisions.should == ['bar']

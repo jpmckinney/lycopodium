@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["James McKinney"]
   s.homepage    = "https://github.com/jpmckinney/lycopodium"
-  s.summary     = %q{Test what transformations you can make to a set of unique strings without creating collisions}
+  s.summary     = %q{Test what transformations you can make to a set of values without creating collisions}
   s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")

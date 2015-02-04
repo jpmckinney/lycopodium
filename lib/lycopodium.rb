@@ -7,22 +7,28 @@ class Lycopodium < Array
 
   attr_accessor :function
 
-  def self.unique_key(data)
-    columns_size = data.first.size
-    data.each do |row|
+  # Returns the shortest unique key in the data table.
+  #
+  # @param [Array<Array>] a data table as a two-dimensional array
+  # @return [Array,nil] the shortest unique key, or nil if none found
+  # @raise [RaggedRow] if the rows in the data table are not of equal length
+  def self.unique_key(table)
+    columns_size = table.first.size
+    table.each do |row|
       unless row.size == columns_size
         raise RaggedRow, row.inspect
       end
     end
 
-    columns = (0...columns_size).to_a
+    indices = (0...columns_size).to_a
     1.upto(columns_size) do |k|
-      columns.combination(k) do |combination|
-        if unique_key?(data, combination)
+      indices.combination(k) do |combination|
+        if unique_key?(table, combination)
           return combination
         end
       end
     end
+
     nil
   end
 
@@ -73,9 +79,9 @@ class Lycopodium < Array
 
 private
 
-  def self.unique_key?(data, combination)
+  def self.unique_key?(table, combination)
     set = Set.new
-    data.each_with_index do |row,index|
+    table.each_with_index do |row,index|
       set.add(row.values_at(*combination))
       if set.size <= index
         return false

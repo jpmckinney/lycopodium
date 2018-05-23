@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/lycopodium.svg)](https://badge.fury.io/rb/lycopodium)
 [![Build Status](https://secure.travis-ci.org/jpmckinney/lycopodium.png)](https://travis-ci.org/jpmckinney/lycopodium)
-[![Dependency Status](https://gemnasium.com/jpmckinney/lycopodium.png)](https://gemnasium.com/jpmckinney/lycopodium)
 [![Coverage Status](https://coveralls.io/repos/jpmckinney/lycopodium/badge.png)](https://coveralls.io/r/jpmckinney/lycopodium)
 [![Code Climate](https://codeclimate.com/github/jpmckinney/lycopodium.png)](https://codeclimate.com/github/jpmckinney/lycopodium)
 
